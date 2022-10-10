@@ -1,0 +1,6 @@
+name: Todolist_pulumi
+description: make and deploy todolist using pulumi
+runtime:
+    name: python
+    options:
+        virtualenv: venv
