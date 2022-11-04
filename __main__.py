@@ -1,11 +1,13 @@
 """An AWS Python Pulumi program"""
 import pulumi
 import pulumi_kubernetes as k8s
-import pulumi_docker as docker
+import pulumi_aws as aws
 import pulumi_eks as eks
 
 
 stack = pulumi.get_stack()
+
+repo = aws.ecr.Repository("myrepo", image_scanning_configuration=True)
 
 cluster = eks.Cluster('app-cluster')
 
