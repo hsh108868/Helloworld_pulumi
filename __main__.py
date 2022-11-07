@@ -10,6 +10,6 @@ stack = pulumi.get_stack()
 repo = aws.ecr.Repository(
     "myrepo", image_scanning_configuration=True, image_tag_mutability="MUTABLE")
 
-cluster = eks.Cluster('app-cluster')
+cluster = eks.Cluster('swift-cluster')
 
 pulumi.export('kubeconfig', cluster.kubeconfig)
