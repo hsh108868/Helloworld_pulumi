@@ -1,4 +1,4 @@
-# Todolist_pulumi
+# Helloworld_pulumi
 
 웹페이지를 pulumi를 이용해 pod에 띄운다 (dockerfile 사용) - 어차피 중요한건 pulumi니가 그냥 hello world로 일단바꿈..
 
