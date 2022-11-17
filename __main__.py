@@ -10,4 +10,4 @@ repo = aws.ecr.Repository("my_repo")
 image = aws.ecr.Image(
     "hello_world", repository_url=repo.url, path="./hello_world")
 
-provider = k8s.Provider("hello_world", config.kubeconfig)
+provider = k8s.Provider("hello_world", kubeconfig=config, )
