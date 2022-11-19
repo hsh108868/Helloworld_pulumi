@@ -32,14 +32,14 @@ appDeployment = k8s.apps.v1.Deployment("apps", spec=k8s.apps.v1.DeploymentSpecAr
             }
         ),
         spec=k8s.core.v1.PodSpecArgs(
-            containers=k8s.core.v1.ContainerArgs(
+            containers=[k8s.core.v1.ContainerArgs(
                 name=appImage,
                 image=customImage,
-                ports=k8s.core.v1.ContainerPortArgs(
+                ports=[k8s.core.v1.ContainerPortArgs(
                     name="http",
                     container_port=80,
-                )
-            )
-        )
-    )
+                )],
+            )],
+        ),
+    ),
 ),)
