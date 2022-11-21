@@ -3,7 +3,6 @@ import pulumi
 import pulumi_kubernetes as k8s
 import pulumi_awsx as aws
 
-
 repo = aws.ecr.Repository("my_repo")
 
 appImage = "hello_world"
